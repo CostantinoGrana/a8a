@@ -5,3 +5,24 @@ This project contains the code for the assembler for the ADE8 architecture.
 ADE8 (Architettura di Esempio a 8 bit - Example 8 bit architecture) is a didactic Instruction Set Architecture, created by Costantino Grana and Roberto Vezzani at the University of Modena and Reggio Emilia, Italy
 
 More info (in Italian) can be found here: https://imagelab.ing.unimore.it/ade8/
+
+## Prerequisites
+You need a C compiler, CMake, Flex and Bison for this to work.
+
+## Compiling under Windows
+Tested using VisualStudio 2019, CMake 3.17.5, and WinFlexBison (bison 3.7.4, flex 2.6.4). Install VisualStudio and CMake as usual, then for WinFlexBison make it from https://github.com/lexxmark/winflexbison or use Chocolatey, which is easier:
+```
+choco install winflexbison3
+```
+Then you just run CMake (with GUI if you like it) and you have your VS project. 
+
+## Compiling under Linux
+Tried on Ubuntu 18.04.4 LTS
+```
+sudo apt-get install flex
+sudo apt-get install bison
+mkdir build
+cd build
+cmake ..
+make
+```
