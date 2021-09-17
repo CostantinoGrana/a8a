@@ -8,7 +8,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "parser_tab.h"
+#include "parser.h"
 void   yyerror(const char *);
 
 char string_buf[255];
