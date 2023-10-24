@@ -26,3 +26,21 @@ cd build
 cmake ..
 make
 ```
+
+## Compiling under MacOS
+(Contributed by Fernando Giordano Pasquini) 
+
+Tested on MacOS Sonoma 14.0, processore M2, Visual Studio Code 1.82.2 (Universal), cmake version 3.27.6, Apple clang version 15.0.0.
+Install Homebrew (https://docs.brew.sh/Installation) 
+
+```
+brew install gcc
+git clone https://github.com/CostantinoGrana/a8a
+cd a8a
+mkdir build
+cd build
+cmake ..
+make
+```
+
+Open Finder, press 'Option' (from Desktop, Documents or Downloads), select the user directory under /Macintosh HD/Users/username, you will find the folder a8a. Open file 'parser.c' in /Users/username/a8a/build with a text editor and change in line 97 the filename from 'malloc.h' to 'stdlib.h'. Run again `make`.
