@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <malloc.h>
+//#include <malloc.h>
 
 #define YYPTRDIFF_T ptrdiff_t
 

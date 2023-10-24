@@ -11,8 +11,8 @@
 
 #include "sym_tab.h"
 
-FILE* yyin;
-int yyparse(void);
+extern FILE* yyin;
+extern int yyparse(void);
 
 bool verbose = false;
 
@@ -22,14 +22,14 @@ void syntax()
 	printf("SYNTAX: a8a [<options>] <input file name>\n");
 	printf("\n");
 	printf("Options:\n");
-	printf("/v\tVerbose parser output\n");
-	printf("/h\tGenerate hexadecimal format output file\n");
-	printf("/b\tGenerate binary format output file\n");
+	printf("-v\tVerbose parser output\n");
+	printf("-h\tGenerate hexadecimal format output file\n");
+	printf("-b\tGenerate binary format output file\n");
 	printf("\n");
 	printf("If no error is found, the following files are created:\n");
 	printf("logisim.txt     - Logisim format ready for memory loading\n");
-	printf("hexadecimal.txt - Hexadecimal format for serial text mode transmission (if /h is specified)\n");
-	printf("memory.bin      - Binary file with machine code as it would be in memory (if /b is specified)\n");
+	printf("hexadecimal.txt - Hexadecimal format for serial text mode transmission (if -h is specified)\n");
+	printf("memory.bin      - Binary file with machine code as it would be in memory (if -b is specified)\n");
 }
 
 int main(int argc, char** argv)
@@ -47,14 +47,14 @@ int main(int argc, char** argv)
 
 	/* Options */
 	bool hexadecimal = false, binary = false;
-	while (argi < argc && argv[argi][0] == '/') {
-		if (strcmp(argv[argi], "/v") == 0) {
+	while (argi < argc && argv[argi][0] == '-') {
+		if (strcmp(argv[argi], "-v") == 0) {
 			verbose = true;
 		}
-		else if (strcmp(argv[argi], "/h") == 0) {
+		else if (strcmp(argv[argi], "-h") == 0) {
 			hexadecimal = true;
 		}
-		else if (strcmp(argv[argi], "/b") == 0) {
+		else if (strcmp(argv[argi], "-b") == 0) {
 			binary = true;
 		}
 		else {
