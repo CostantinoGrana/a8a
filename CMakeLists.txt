@@ -4,7 +4,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 project(a8a)
 
 if(MSVC)
-    add_compile_definitions(-D_CRT_SECURE_NO_WARNINGS)
+    add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
 	set(FLEX_ADDITIONAL_FLAGS "--wincompat")
 endif()
 
