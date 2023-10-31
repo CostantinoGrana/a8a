@@ -42,5 +42,3 @@ cd build
 cmake ..
 make
 ```
-
-Open Finder, press 'Option' (from Desktop, Documents or Downloads), select the user directory under /Macintosh HD/Users/username, you will find the folder a8a. Open file 'parser.c' in /Users/username/a8a/build with a text editor and change in line 97 the filename from 'malloc.h' to 'stdlib.h'. Run again `make`.
